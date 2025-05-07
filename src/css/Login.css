@@ -1,0 +1,56 @@
+.lgn_container{
+    width: 100vw;
+    height:100vh;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    background: rgb(68, 131, 138);
+  }
+  .lgn_frm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    border:2px solid black;
+    padding:30px;
+    border-radius: 12px;
+    background:  rgb(69, 147, 156);
+  }
+  #lbl{
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: whitesmoke;
+    font-weight: 600;
+    float: left;
+  }
+  #mail,#pwd{
+    font-size: 20px;
+    border-radius: 8px;
+    padding-left:4px ;
+    outline: none;
+    float:right;
+    height: 30px;
+    width:250px;
+  }
+  #lgn_btn{
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding:10px;
+    background: blue;
+    color:white;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    box-shadow: 0 3px 7px black;
+    cursor: pointer ;
+  }
+  #lgn_btn:hover{
+    background: rgb(66, 66, 244);
+    box-shadow: 0 3px 7px rgb(181, 192, 208);
+  }
