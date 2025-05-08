@@ -2,20 +2,33 @@ import '../css/Signup.css'
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
 import {createUserWithEmailAndPassword } from "firebase/auth";
-import {auth} from './Firebase'
+import {auth,db} from './Firebase'
 import {useNavigate} from 'react-router-dom'
+import {doc,setDoc} from 'firebase/firestore'
 function Signup(){
    const[username,setUsername]=useState('')
    const[email,setEmail]=useState('')
    const[password,setPassword]=useState('')
    const navigate=useNavigate()
+
+   const addToFirestore=async (u)=>{
+    const userRef=doc(db,'users',u.uid)
+    
+    await setDoc(userRef,{
+     uid:u.uid,
+     name:username,
+     email:u.email
+    },{merge:true})
+ }
    const SignupUser=()=>{
     createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed up 
+    const user = userCredential.user;
+    addToFirestore(user)
     alert('successfully registered')
     navigate('/login')
-    const user = userCredential.user;
+
     // ...
   })
   .catch((error) => {
