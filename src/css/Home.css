@@ -27,7 +27,7 @@
     row-gap: 15px;
     color:rgb(176, 236, 49);
     font-weight: 700;
-    width:370px;
+    width:350px;
     box-shadow: 2px 0px 5px rgb(26, 52, 59);
     animation: bounce ease-in-out 1.5s;
   }

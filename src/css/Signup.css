@@ -28,6 +28,7 @@
     padding:30px;
     border-radius: 12px;
     animation:vlew ease-in-out 5s infinite;
+    width:350px;
 }
 #l1,#l2,#l3{
     font-size: 20px;

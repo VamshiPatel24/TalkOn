@@ -27,6 +27,7 @@
     padding:30px;
     border-radius: 12px;
     background:  rgb(69, 147, 156);
+    width:350px;
     animation:vlew ease-in-out 5s infinite;
   }
   #lbl{
