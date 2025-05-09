@@ -5,5 +5,17 @@
     align-items: center;
     width: 100vw;
     height:100vh;
-    background: orange;
+    background: #03DAC6;
+    row-gap: 5px;
+}
+.chats{
+    height:600px;
+    width:340px;
+    background: white;
+    border-radius: 5px;
+    padding:0 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    overflow: scroll;
 }

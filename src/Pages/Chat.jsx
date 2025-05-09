@@ -49,7 +49,7 @@ function Chat(){
                   const sender = users.find((u)=>u.uid.trim()===msg.sender.trim());
                 const senderName=sender?sender.name:'Unknown'
                 return(
-                  <div key={index}>
+                  <div key={index} style={{textAlign:user.uid===msg.sender?'right':'left',width:'100%',paddingLeft:user.uid===msg.sender?'45%':'2px',paddingRight:user.uid===msg.sender?'2px':'45%' }} >
                       <strong>{senderName} : </strong>
                       {msg.message}
                    </div>
@@ -58,14 +58,15 @@ function Chat(){
             )}
         </div>
 
-        <form onSubmit={handleSendMessage}>
+        <form onSubmit={handleSendMessage} style={{display:"flex", columnGap:"5px", flexWrap:"wrap"}}>
              <input 
              id='usr-inp'
+             style={{fontSize:'20px',borderRadius:'8px',paddingLeft:'5px'}}
              placeholder="Enter Your Message"
              value={newMessage}
              onChange={(event)=>{setNewMessage(event.target.value)}}
              />
-             <button type="submit">Send</button>
+             <button type="submit" style={{color:'white',background:'blue',fontSize:'22px',padding:'8px',borderRadius:'6px',border:'none',outline:'none',cursor:'pointer'}}>Send</button>
         </form>
       </div>
     </>

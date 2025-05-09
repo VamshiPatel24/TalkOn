@@ -11,6 +11,12 @@
     row-gap: 10px;
     background: rgb(68, 131, 138);
 }
+ @keyframes  vlew{
+    25%{transform: translateY(2%);}
+    50%{transform: translateY(-2%);}
+    75%{transform: translateY(2%);}
+    100%{transform: translateY(-2%);}
+  }
 .sign_frm{
     display:flex;
     flex-direction: column;
@@ -21,6 +27,7 @@
     border:2px solid black;
     padding:30px;
     border-radius: 12px;
+    animation:vlew ease-in-out 5s infinite;
 }
 #l1,#l2,#l3{
     font-size: 20px;

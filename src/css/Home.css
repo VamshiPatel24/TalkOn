@@ -1,5 +1,5 @@
 .talk_main{
-    background-image: url('/frequency.jpg');
+    background:linear-gradient(to right,#6f478c,#d76f6f,#d1ab74);
     width:100vw;
     height: 100vh;
    background-position: center;
@@ -10,18 +10,26 @@
    background-repeat: no-repeat;
    background-size: cover;
   }
+  @keyframes  bounce{
+    0%{transform: translateY(-100%);}
+    50%{transform:translateY(70%);}
+    75%{transform: translateY(-20%);}
+    100%{transform: translateY(25%);}
+  }
   .logo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border:2px solid rgb(191, 191, 20);
     padding:20px;
     border-radius: 12px;
-    background: rgba(112, 160, 184, 0.74);
+    background: linear-gradient(to right,#ad5de5,#f06344,#e99a2c);
     row-gap: 15px;
-    color:rgb(235, 25, 14);
+    color:rgb(176, 236, 49);
     font-weight: 700;
+    width:370px;
+    box-shadow: 2px 0px 5px rgb(26, 52, 59);
+    animation: bounce ease-in-out 1.5s;
   }
   #talk_btn{
     font-size: 20px;

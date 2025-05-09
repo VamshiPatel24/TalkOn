@@ -11,6 +11,12 @@
     row-gap: 10px;
     background: rgb(68, 131, 138);
   }
+   @keyframes  vlew{
+    25%{transform: translateY(2%);}
+    50%{transform: translateY(-2%);}
+    75%{transform: translateY(2%);}
+    100%{transform: translateY(-2%);}
+  }
   .lgn_frm{
     display: flex;
     flex-direction: column;
@@ -21,6 +27,7 @@
     padding:30px;
     border-radius: 12px;
     background:  rgb(69, 147, 156);
+    animation:vlew ease-in-out 5s infinite;
   }
   #lbl{
     font-size: 20px;

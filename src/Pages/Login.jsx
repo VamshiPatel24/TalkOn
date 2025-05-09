@@ -28,6 +28,7 @@ function Login(){
     return(
         <>
            <div className='lgn_container'>
+           
              <img src="/talkon.png" width='150px' height='100px' style={{borderRadius:'10px'}}/>
              <div className="lgn_frm">
               <h1 style={{color:'rgb(241, 117, 0)',fontWeight:'600'}}>Login</h1>
@@ -50,6 +51,7 @@ function Login(){
                 <button id='lgn_btn' onClick={loginUser}>Login</button>
                 <Link to='/register' style={{textDecoration:'none',color:'gold',fontSize:'18px'}}>Not a registered user ? Signup</Link>
              </div>
+             
            </div>
         </>
     )
