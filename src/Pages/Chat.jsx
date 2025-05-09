@@ -3,7 +3,7 @@ import '../css/Chat.css'
 import {db,auth} from './Firebase'
 import {useAuthState} from 'react-firebase-hooks/auth'
 import {collection,addDoc, onSnapshot, query,orderBy, serverTimestamp} from 'firebase/firestore'
-function chat(){
+function Chat(){
   const[user]=useAuthState(auth)
   const[users,setUsers]=useState([])
   const[messages,setMessages]=useState([])
@@ -34,7 +34,7 @@ function chat(){
     const q=query(msgRef,orderBy('timestamp'))
 
     const unSubscribe=onSnapshot(q,(snapshot)=>{
-      const msgs=snapshot.docs.map((doc)=>doc.data);
+      const msgs=snapshot.docs.map((doc)=>doc.data());
       setMessages(msgs)
     })
     return()=> unSubscribe()
@@ -43,9 +43,6 @@ function chat(){
     <>
       <div className='chat_container'>
       <h1 style={{fontSize:'36 px',color:'blue',letterSpacing:'1px'}}>Your Chat Room</h1>
-        {
-          users.map((usr,index)=><li>{usr.name}</li>)
-        }
         <div className='chats'>
             {messages.length===0?(<p>No message available</p>):(
               messages.map((msg,index)=>{
@@ -53,7 +50,7 @@ function chat(){
                 const senderName=sender?sender.name:'Unknown'
                 return(
                   <div key={index}>
-                      <strong>{senderName}</strong>
+                      <strong>{senderName} : </strong>
                       {msg.message}
                    </div>
                 )
@@ -74,4 +71,4 @@ function chat(){
     </>
    )
 }
-export default chat
+export default Chat
